@@ -1,0 +1,67 @@
+{
+  "preferences": {
+    "css.autoInsertVendorPrefixes": false,
+    "caniuse.enabled": false,
+    "caniuse.vendors": false
+  },
+  "snippets": {
+    "html": {
+      "snippets": {
+        "svg": "[[azbntple tpl=\"/src/block/${1:site/default}/svg-sprite/.html\" icon-name=\"${2:#}\" ]]",
+        "block-page": "[[azbntple\n\ttpl=\"/src/block/site/page/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_block=\"${3:post}\"]]" , 
+        "block-default": "[[azbntple\n\ttpl=\"/src/block/site/default/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_${3:post}=\"${4:post}\"]]" , 
+        "block-script": "[[azbntple\n\ttpl=\"/src/block/site/default/script/${1:#}.html\"\n]]" , 
+        "fancy-img": "[[azbntple\n\ttpl=\"/src/block/site/default/fancybox3/img.html\"\n\tfancybox_class=\"${1:#}\"\n\tfancybox_gallery_id=\"${2:#}\"\n\tfancybox_preview_lg=\"${3:#}\"\n\tfancybox_preview=\"${4:#}\"\n]]" , 
+        "fi":"<a class=\"fancybox-preview img\" href=\"{{url-path-img}}${1:#}\" data-fancybox=\"${2:#}\">\n\t<img src=\"{{url-path-img}}${3:#}\" alt=\"${4:#}\">\n</a>",      
+        "mailto":"<a href=\"mailto:${1:#}\">${2:#}</a>${3}",     
+        "tel":"<a href=\"tel:${1:#}\">${2:#}</a>${3}",      
+        "rub":"₽",      
+        "ar": "<router-link\n\t:to=\"'${1:#}'\"\n\tclass=\"{{prefix.${2:#}}}${3:#}\"\n\tactive-class=\"is--active\"\n\texact-active-class=\"\">\n\t${4}\n</router-link>${5}",
+        "url-php":"<?=$this->path('img');?>${1}"   
+      },
+      "abbreviations": {
+
+        "divp": "<div class=\"{{block_prefix}}${1:#}  {{block_mod}}\">${2:#}</div>${3}",
+        "divv": "<div v-bind:class=\"prefix+'${1:#}'\">${2:#}</div>${3}",
+        "ulp": "<ul class=\"{{block_prefix}}${1:#}\">${2:#}</ul>${3}",
+        "lip": "<li class=\"{{block_prefix}}${1:#}\">${2:#}</li>${3}",
+        "ap": "<a href=\"${1:#}\" class=\"{{block_prefix}}${2:#}\">${3:#}</a>${4}",
+        "btn": "<button type=\"button\" class=\"btn-site ${1:#}\">${2:post}</button>",
+        "btn-modal": "<button type=\"button\" class=\"btn-site ${1:#}\" data-toggle=\"modal\" data-target=\"#${2:post}\">${3:post}</button>",
+        "param": "<?=$param[\"${1:#}\"];?>",
+      }
+    },
+    "css": {
+      "abbreviations": {
+        "c1": "@primary",      
+        "c2": "@default",      
+        "c3": "@warning",      
+        "c4": "@success",      
+        "c5": "@info",      
+        "c6": "@danger",      
+        "hea": ".heading${1:#}();\n",      
+        "prf": "&${1:#}{\n\t${2:post}\n}",      
+        "@m-s": "@media @media-screen {\n\t${1:#}\n}",      
+        "@m-ns": "@media @media-notsmart {\n\t${1:#}\n}",      
+        "@m-d": "@media @media-device {\n\t${1:#}\n}",      
+        "@m-si": "@media @media-size-${1:#} {\n\t${2:#}\n}",
+        "@m-p": "@media @media-point-${1:#} {\n\t${2:#}\n}",
+        "@m-ps": "@media @media-point-screen {\n\t${1:#}\n}",
+        "@m-psl": "@media @media-point-screen-lg {\n\t${1:#}\n}",
+        "@m-pd": "@media @media-point-device {\n\t${1:#}\n}",
+        "@m-pdl": "@media @media-point-device-lg {\n\t${1:#}\n}",
+        "@m-pt": "@media @media-point-tablet {\n\t${1:#}\n}",
+        "@m-px": "@media @media-point-smart {\n\t${1:#}\n}",
+        "@m-pnx": "@media @media-point-notsmart {\n\t${1:#}\n}",
+        "fzm": ".calcFontSize(${1:#}, ${2:#}, 320, 1680);${3}",    
+        "trs-site": "transition: @trs-site;${1}",    
+        "lhm": ".calcLineHeight(${1:#}, ${2:#}, 320, 1680);${3}",    
+        "ws": ".makeCols(${1:#}, 12);${2}",  
+        "wso": ".makeColsOffset(${1:#}, 12);${2}",  
+        "wsp": ".makeColsPull(${1:#}, 12, 15px);${2}",  
+        "mpc": ".multipleColumn(${1:columns}, ${2:gutter});${3}",  
+        "btn": ".btn-clearfix();${1}",  
+      }
+    }
+  } 
+}

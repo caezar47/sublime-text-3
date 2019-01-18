@@ -1,0 +1,7 @@
+[	
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+	{ "keys": ["ctrl+home"], "command": "move_to", "args": {"to": "bof", "extend": true} },
+	{ "keys": ["ctrl+end"], "command": "move_to", "args": {"to": "eof", "extend": true} },
+]
