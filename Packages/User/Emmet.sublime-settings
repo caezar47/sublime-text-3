@@ -7,20 +7,25 @@
   "snippets": {
     "html": {
       "snippets": {
+        "tbtn": "{% include \"../../common/button/btn.twig\" with {view:\"${1}\",prefix:\"btn__\", mod:\"${2}\", link:\"${3}\", name:\"${4}\" } %}${5}",
+        "grid": "<div class=\"grid__row  ${1}\">\n\t<div class=\"grid__cols\">\n\t\t${2:#}\n\t</div>${3}\n</div>${4}",
+        "gridp": "<div class=\"{{content_prefix}}grid-row  grid__row  ${1}  {{content_mod}}\">\n\t<div class=\"{{content_prefix}}grid-cols  grid__cols  {{content_mod}}\">\n\t\t${2:#}\n\t</div>${3}\n</div>${4}",
         "svg": "[[azbntple tpl=\"/src/block/${1:site/default}/svg-sprite/.html\" icon-name=\"${2:#}\" ]]",
+        "link": "[[azbntple\n\ttpl=\"/src/block/${1:site/default}/button/link.html\"\n\tbutton_prefix=\"btn__\"\n\tbutton_mod=\"${2:  }\"\n\tbutton_link=\"${3:##}\"\n\tbutton_name=\"${4:##}\"\n]]",
         "block-page": "[[azbntple\n\ttpl=\"/src/block/site/page/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_block=\"${3:post}\"]]" , 
         "block-default": "[[azbntple\n\ttpl=\"/src/block/site/default/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_${3:post}=\"${4:post}\"]]" , 
         "block-script": "[[azbntple\n\ttpl=\"/src/block/site/default/script/${1:#}.html\"\n]]" , 
         "fancy-img": "[[azbntple\n\ttpl=\"/src/block/site/default/fancybox3/img.html\"\n\tfancybox_class=\"${1:#}\"\n\tfancybox_gallery_id=\"${2:#}\"\n\tfancybox_preview_lg=\"${3:#}\"\n\tfancybox_preview=\"${4:#}\"\n]]" , 
         "fi":"<a class=\"fancybox-preview img\" href=\"{{url-path-img}}${1:#}\" data-fancybox=\"${2:#}\">\n\t<img src=\"{{url-path-img}}${3:#}\" alt=\"${4:#}\">\n</a>",      
         "mailto":"<a href=\"mailto:${1:#}\">${2:#}</a>${3}",     
+        "phone":"{{${1:contacts.phone}${2:#}replace({'-': '','(': '',')': '',' ': ''})}}",     
         "tel":"<a href=\"tel:${1:#}\">${2:#}</a>${3}",      
         "rub":"₽",      
         "ar": "<router-link\n\t:to=\"'${1:#}'\"\n\tclass=\"{{prefix.${2:#}}}${3:#}\"\n\tactive-class=\"is--active\"\n\texact-active-class=\"\">\n\t${4}\n</router-link>${5}",
         "url-php":"<?=$this->path('img');?>${1}"   
       },
-      "abbreviations": {
-
+      "abbreviations": {                
+        "nl": "<nuxt-link to=\"${1}\" class=\"${2}\">${3}</nuxt-link>${4}",
         "divp": "<div class=\"{{block_prefix}}${1:#}  {{block_mod}}\">${2:#}</div>${3}",
         "divv": "<div v-bind:class=\"prefix+'${1:#}'\">${2:#}</div>${3}",
         "ulp": "<ul class=\"{{block_prefix}}${1:#}\">${2:#}</ul>${3}",
@@ -39,8 +44,12 @@
         "c4": "@success",      
         "c5": "@info",      
         "c6": "@danger",      
+        "c7": "@custom",      
         "hea": ".heading${1:#}();\n",      
         "prf": "&${1:#}{\n\t${2:post}\n}",      
+        "mpi": "@include media-breakpoint-${1:#}(${2:#}){\n\t${3:#}\n}",      
+        "mpu": ".media-breakpoint-up(@${1:screen}; {\n\t${2:@rules}\n});",      
+        "mpd": ".media-breakpoint-down(@${1:screen}; {\n\t${2:@rules}\n});",
         "@m-s": "@media @media-screen {\n\t${1:#}\n}",      
         "@m-ns": "@media @media-notsmart {\n\t${1:#}\n}",      
         "@m-d": "@media @media-device {\n\t${1:#}\n}",      

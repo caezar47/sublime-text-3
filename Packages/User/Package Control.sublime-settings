@@ -8,6 +8,9 @@
 		"Emmet",
 		"LESS",
 		"Package Control",
-		"SideBarEnhancements"
+		"PHP-Twig",
+		"Sass",
+		"SideBarEnhancements",
+		"Vue Syntax Highlight"
 	]
 }
