@@ -1,76 +1,45 @@
 {
-  "preferences": {
-    "css.autoInsertVendorPrefixes": false,
-    "caniuse.enabled": false,
-    "caniuse.vendors": false
-  },
-  "snippets": {
-    "html": {
-      "snippets": {
-        "tbtn": "{% include \"../../common/button/btn.twig\" with {view:\"${1}\",prefix:\"btn__\", mod:\"${2}\", link:\"${3}\", name:\"${4}\" } %}${5}",
-        "grid": "<div class=\"grid__row  ${1}\">\n\t<div class=\"grid__cols\">\n\t\t${2:#}\n\t</div>${3}\n</div>${4}",
-        "gridp": "<div class=\"{{content_prefix}}grid-row  grid__row  ${1}  {{content_mod}}\">\n\t<div class=\"{{content_prefix}}grid-cols  grid__cols  {{content_mod}}\">\n\t\t${2:#}\n\t</div>${3}\n</div>${4}",
-        "svg": "[[azbntple tpl=\"/src/block/${1:site/default}/svg-sprite/.html\" icon-name=\"${2:#}\" ]]",
-        "link": "[[azbntple\n\ttpl=\"/src/block/${1:site/default}/button/link.html\"\n\tbutton_prefix=\"btn__\"\n\tbutton_mod=\"${2:  }\"\n\tbutton_link=\"${3:##}\"\n\tbutton_name=\"${4:##}\"\n]]",
-        "block-page": "[[azbntple\n\ttpl=\"/src/block/site/page/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_block=\"${3:post}\"]]" , 
-        "block-default": "[[azbntple\n\ttpl=\"/src/block/site/default/${1:#}\"\n\tclass=\"${2:post}\"\n\tprefix_${3:post}=\"${4:post}\"]]" , 
-        "block-script": "[[azbntple\n\ttpl=\"/src/block/site/default/script/${1:#}.html\"\n]]" , 
-        "fancy-img": "[[azbntple\n\ttpl=\"/src/block/site/default/fancybox3/img.html\"\n\tfancybox_class=\"${1:#}\"\n\tfancybox_gallery_id=\"${2:#}\"\n\tfancybox_preview_lg=\"${3:#}\"\n\tfancybox_preview=\"${4:#}\"\n]]" , 
-        "fi":"<a class=\"fancybox-preview img\" href=\"{{url-path-img}}${1:#}\" data-fancybox=\"${2:#}\">\n\t<img src=\"{{url-path-img}}${3:#}\" alt=\"${4:#}\">\n</a>",      
-        "mailto":"<a href=\"mailto:${1:#}\">${2:#}</a>${3}",     
-        "phone":"{{${1:contacts.phone}${2:#}replace({'-': '','(': '',')': '',' ': ''})}}",     
-        "tel":"<a href=\"tel:${1:#}\">${2:#}</a>${3}",      
-        "rub":"₽",      
-        "ar": "<router-link\n\t:to=\"'${1:#}'\"\n\tclass=\"{{prefix.${2:#}}}${3:#}\"\n\tactive-class=\"is--active\"\n\texact-active-class=\"\">\n\t${4}\n</router-link>${5}",
-        "url-php":"<?=$this->path('img');?>${1}"   
-      },
-      "abbreviations": {                
-        "nl": "<nuxt-link to=\"${1}\" class=\"${2}\">${3}</nuxt-link>${4}",
-        "divp": "<div class=\"{{block_prefix}}${1:#}  {{block_mod}}\">${2:#}</div>${3}",
-        "divv": "<div v-bind:class=\"prefix+'${1:#}'\">${2:#}</div>${3}",
-        "ulp": "<ul class=\"{{block_prefix}}${1:#}\">${2:#}</ul>${3}",
-        "lip": "<li class=\"{{block_prefix}}${1:#}\">${2:#}</li>${3}",
-        "ap": "<a href=\"${1:#}\" class=\"{{block_prefix}}${2:#}\">${3:#}</a>${4}",
-        "btn": "<button type=\"button\" class=\"btn-site ${1:#}\">${2:post}</button>",
-        "btn-modal": "<button type=\"button\" class=\"btn-site ${1:#}\" data-toggle=\"modal\" data-target=\"#${2:post}\">${3:post}</button>",
-        "param": "<?=$param[\"${1:#}\"];?>",
-      }
-    },
-    "css": {
-      "abbreviations": {
-        "c1": "@primary",      
-        "c2": "@default",      
-        "c3": "@warning",      
-        "c4": "@success",      
-        "c5": "@info",      
-        "c6": "@danger",      
-        "c7": "@custom",      
-        "hea": ".heading${1:#}();\n",      
-        "prf": "&${1:#}{\n\t${2:post}\n}",      
-        "mpi": "@include media-breakpoint-${1:#}(${2:#}){\n\t${3:#}\n}",      
-        "mpu": ".media-breakpoint-up(@${1:screen}; {\n\t${2:@rules}\n});",      
-        "mpd": ".media-breakpoint-down(@${1:screen}; {\n\t${2:@rules}\n});",
-        "@m-s": "@media @media-screen {\n\t${1:#}\n}",      
-        "@m-ns": "@media @media-notsmart {\n\t${1:#}\n}",      
-        "@m-d": "@media @media-device {\n\t${1:#}\n}",      
-        "@m-si": "@media @media-size-${1:#} {\n\t${2:#}\n}",
-        "@m-p": "@media @media-point-${1:#} {\n\t${2:#}\n}",
-        "@m-ps": "@media @media-point-screen {\n\t${1:#}\n}",
-        "@m-psl": "@media @media-point-screen-lg {\n\t${1:#}\n}",
-        "@m-pd": "@media @media-point-device {\n\t${1:#}\n}",
-        "@m-pdl": "@media @media-point-device-lg {\n\t${1:#}\n}",
-        "@m-pt": "@media @media-point-tablet {\n\t${1:#}\n}",
-        "@m-px": "@media @media-point-smart {\n\t${1:#}\n}",
-        "@m-pnx": "@media @media-point-notsmart {\n\t${1:#}\n}",
-        "fzm": ".calcFontSize(${1:#}, ${2:#}, 320, 1680);${3}",    
-        "trs-site": "transition: @trs-site;${1}",    
-        "lhm": ".calcLineHeight(${1:#}, ${2:#}, 320, 1680);${3}",    
-        "ws": ".makeCols(${1:#}, 12);${2}",  
-        "wso": ".makeColsOffset(${1:#}, 12);${2}",  
-        "wsp": ".makeColsPull(${1:#}, 12, 15px);${2}",  
-        "mpc": ".multipleColumn(${1:columns}, ${2:gutter});${3}",  
-        "btn": ".btn-clearfix();${1}",  
-      }
-    }
-  } 
+	"config":
+	{
+		"less":
+		{
+			"snippets":
+			{
+				"pc": "color: @primary;${1}",
+				"pbc": "background-color: @primary;${1}",
+				"cp": "${1}color: @primary;",
+				"cd": "${1}color: @default;",
+				"cw": "${1}color: @warning;",
+				"csu": "${1}color: @success;", 
+				"ci": "${1}color: @info;",
+				"cdr": "${1}color: @danger;",
+				"cc": "${1}color: @custom;",
+				"@sup": "@supports (${1:display: grid}){\n\t${2:@rules}\n}",
+				"btnc": ".btn-clearfix();${1}",
+				"hea": ".heading${1:#}();\n",
+				"mpb": ".media-breakpoint-between(@${1:min}; @${2:max}; {\n\t${3:@rules}\n});",
+				"mpd": ".media-breakpoint-down(@${1:screen}; {\n\t${2:@rules}\n});",
+				"mpl": ".media-breakpoint-${1:x}(@${2:min}; @${3:max}; {\n\t${4:@rules}\n});",
+				"mps": "@include media-breakpoint-${1:#}(${2:#}){\n\t${3:#}\n}",
+				"mpu": ".media-breakpoint-up(@${1:screen}; {\n\t${2:@rules}\n});", 
+				"sbr": "border-radius: @site_br${1};${2}",
+				"sbsh": "box-shadow: @site_shadow${1};${2}",
+				"scl": "color: @site_color;${1}",
+				"sff": "font-family: @site_ff${1};${2}",
+				"sffc": "font-family: @site_ff_custom;${1}",
+				"sfs": "font-size: @site_fs ${1};${2}",
+				"slh": "line-height: @site_lh ${1};${2}", 
+				"trss": "transition: @trs-site;${1}"
+			}
+		},
+		"html":
+		{
+			"snippets":
+			{
+				"rub": "₽",
+			}
+		}
+	},
+	"telemetry": false,
+	"uid": "622c60fe-a167-4260-bb7b-e4fad733fe6a"
 }

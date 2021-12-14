@@ -1,14 +1,20 @@
 {
+	"auto_upgrade_ignore":
+	[
+		"Emmet"
+	],
 	"color_scheme": "Packages/User/Notepad++.tmTheme",
 	"fallback_encoding": "UTF-8",
 	"font_size": 10,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Sass",
+		"Vintage",
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"tab_size": 4,
-	"word_wrap": "true"
+	"update_check": false,
+	"word_wrap": "true",
 }

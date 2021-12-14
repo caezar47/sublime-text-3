@@ -1,0 +1,47 @@
+{
+	"snippets":
+	{
+		"css":
+		{
+			
+				"@m-d": "@media @media-device {\n\t${1:#}\n}",
+				"@m-ns": "@media @media-notsmart {\n\t${1:#}\n}",
+				"@m-p": "@media @media-point-${1:#} {\n\t${2:#}\n}",
+				"@m-pd": "@media @media-point-device {\n\t${1:#}\n}",
+				"@m-pdl": "@media @media-point-device-lg {\n\t${1:#}\n}",
+				"@m-pnx": "@media @media-point-notsmart {\n\t${1:#}\n}",
+				"@m-ps": "@media @media-point-screen {\n\t${1:#}\n}",
+				"@m-psl": "@media @media-point-screen-lg {\n\t${1:#}\n}",
+				"@m-pt": "@media @media-point-tablet {\n\t${1:#}\n}",
+				"@m-px": "@media @media-point-smart {\n\t${1:#}\n}",
+				"@m-s": "@media @media-screen {\n\t${1:#}\n}",
+				"@m-si": "@media @media-size-${1:#} {\n\t${2:#}\n}",
+				"@sup": "@supports (${1:display: grid}){\n\t${2:@rules}\n}",
+				"btn": ".btn-clearfix();${1}",
+				"c1": "@primary",
+				"c2": "@default",
+				"c3": "@warning",
+				"c4": "@success",
+				"c5": "@info",
+				"c6": "@danger",
+				"c7": "@custom",
+				"fzm": ".calcFontSize(${1:#}, ${2:#}, 320, 1680);${3}",
+				"hea": ".heading${1:#}();\n",
+				"lhm": ".calcLineHeight(${1:#}, ${2:#}, 320, 1680);${3}",
+				"mpc": ".multipleColumn(${1:columns}, ${2:gutter});${3}",
+				"mpd": ".media-breakpoint-down(@${1:screen}; {\n\t${2:@rules}\n});",
+				"mpi": "@include media-breakpoint-${1:#}(${2:#}){\n\t${3:#}\n}",
+				"mpu": ".media-breakpoint-up(@${1:screen}; {\n\t${2:@rules}\n});",
+				"prf": "&${1:#}{\n\t${2:post}\n}",
+				"scl": "color: @site_color;${1}",
+				"sff": "font-family: @site_ff${1};${2}",
+				"sfs": "font-size: @site_fs ${1};${2}",
+				"slh": "line-height: @site_lh ${1};${2}",
+				"trs-site": "transition: @trs-site;${1}",
+				"ws": ".makeCols(${1:#}, 12);${2}",
+				"wso": ".makeColsOffset(${1:#}, 12);${2}",
+				"wsp": ".makeColsPull(${1:#}, 12, 15px);${2}"
+			
+		}
+	}
+}
